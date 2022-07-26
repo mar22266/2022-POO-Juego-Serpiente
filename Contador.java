@@ -14,11 +14,11 @@ public class Contador extends Actor
      */
     public int Punteo = 0;
     public Contador(){
-        setImage(new GreenfootImage("Puntos: "+ Punteo, 32, Color.WHITE, Color.BLACK));
+        setImage(new GreenfootImage("Puntos: "+ Punteo, 42, Color.RED, Color.WHITE));
     }
     public void act()
     {
-        setImage(new GreenfootImage("Puntos: "+ Punteo, 32, Color.WHITE, Color.BLACK));
+        setImage(new GreenfootImage("Puntos: "+ Punteo, 42, Color.RED, Color.WHITE));
         Ganaste();
     }
     public void addPunteo(){
@@ -28,7 +28,7 @@ public class Contador extends Actor
         return Punteo;
     }
     public void Ganaste(){
-        if (Punteo == 15){
+        if (Punteo == 25){
            getWorld().addObject(new Ganaste(), getWorld().getWidth()/2, getWorld().getHeight()/2);
            Greenfoot.stop();
         }

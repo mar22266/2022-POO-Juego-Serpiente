@@ -24,7 +24,7 @@ public class Jugador extends Actor
         this.v = v;
         this.a = a;
         getImage().setColor(new Color(r,v,a));
-        getImage().fillOval(0,0,50,50);
+        getImage().fillOval(0,0,100,100);
     }
     public void act()
     {

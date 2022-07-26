@@ -28,7 +28,7 @@ public class Cola extends Actor
         contLenght++;
         
 
-        if(contLenght > 20 && isTouching(Jugador.class))
+        if(contLenght > 40 && isTouching(Jugador.class))
         {
             getWorld().addObject(new Perdiste(), getWorld().getWidth()/2, getWorld().getHeight()/2);
             Greenfoot.stop();

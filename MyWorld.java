@@ -13,14 +13,14 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
-    Jugador Jugador1 = new Jugador(0,255,0);
+    Jugador Jugador1 = new Jugador(255,255,0);
     Contador Contador1 = new Contador();
     int cont = 0;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
-        getBackground().setColor(Color.GRAY);
+        getBackground().setColor(Color.BLACK);
         getBackground().fill();
         addObject(Jugador1,300,300);
         addObject(Contador1,70,50);
@@ -29,8 +29,8 @@ public class MyWorld extends World
 
     public void act(){
         cont++;
-        if(cont > 25){
-            addObject(new Comida(0,0,255), Greenfoot.getRandomNumber(getWidth() -1),Greenfoot.getRandomNumber(getHeight() -1));
+        if(cont > 40){
+            addObject(new Comida(255,0,0), Greenfoot.getRandomNumber(getWidth() -1),Greenfoot.getRandomNumber(getHeight() -1));
             cont = 0; }
         myMusic.playLoop();
     }
